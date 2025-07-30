@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SpaceFlights" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/your_background_color</item>
+        <item name="colorPrimaryVariant">@color/your_background_color</item>
+        <item name="colorOnPrimary">#ffffff</item>
+        <!-- Secondary brand color. -->
+
+        <item name="colorOnSecondary">@color/your_background_color</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Status bar color. -->
+    </style>
+
+    <style name="Theme.SpaceFlights" parent="Base.Theme.SpaceFlights" />
+</resources>

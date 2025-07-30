@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="bottom_nav_icon_size">24dp</dimen>
+    <dimen name="bottom_nav_icon_size_active">30dp</dimen>
+    <dimen name="bottom_nav_text_size">14sp</dimen>
+</resources>

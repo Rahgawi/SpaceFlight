@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/launchesFragment">
+
+    <fragment
+        android:id="@+id/launchesFragment"
+        android:name="com.example.spaceflights.ui.LaunchesFragment"
+        android:label="fragment_launches"
+        tools:layout="@layout/fragment_launches" >
+        <action
+            android:id="@+id/action_launchesFragment_to_launchesDetailFragment"
+            app:destination="@id/launchesDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/launchesDetailFragment"
+        android:name="com.example.spaceflights.ui.LaunchesDetailFragment"
+        android:label="fragment_launches_detail"
+        tools:layout="@layout/fragment_launches_detail" >
+        <action
+            android:id="@+id/action_launchesDetailFragment_to_launchesFragment"
+            app:destination="@id/launchesFragment" />
+        <argument
+            android:name="launchID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.spaceflights.ui.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_launchesFragment"
+            app:destination="@id/launchesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationsFragment"
+        android:name="com.example.spaceflights.ui.LocationsFragment"
+        android:label="fragment_locations"
+        tools:layout="@layout/fragment_locations" />
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.example.spaceflights.ui.EventsFragment"
+        android:label="fragment_events"
+        tools:layout="@layout/fragment_events" />
+    <fragment
+        android:id="@+id/rocketsFragment"
+        android:name="com.example.spaceflights.ui.RocketsFragment"
+        android:label="fragment_rockets"
+        tools:layout="@layout/fragment_rockets" />
+    <fragment
+        android:id="@+id/starshipFragment"
+        android:name="com.example.spaceflights.ui.StarshipFragment"
+        android:label="fragment_starship"
+        tools:layout="@layout/fragment_starship" />
+</navigation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/launchesFragment"
+        android:icon="@drawable/launches"
+        android:title="Launches" />
+    <item
+        android:id="@+id/eventsFragment"
+        android:icon="@drawable/events__1_"
+        android:title="Events" />
+    <item
+        android:id="@+id/rocketsFragment"
+        android:icon="@drawable/rocket__2_"
+        android:title="Rockets" />
+    <item
+        android:id="@+id/starshipFragment"
+        android:icon="@drawable/starship"
+        android:title="Starship" />
+    <item
+        android:id="@+id/locationsFragment"
+        android:icon="@drawable/pin__1_"
+        android:title="Locations" />
+</menu>

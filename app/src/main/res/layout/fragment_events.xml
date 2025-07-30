@@ -1,0 +1,280 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.EventsFragment"
+    android:background="@drawable/beautiful_night_sky_with_shiny_stars_1"> <!-- Hintergrundbild für den Vollbildhintergrund -->
+
+    <!-- Title Text with Gradient -->
+    <ImageView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:contentDescription="Events"
+        android:fontFamily="sans-serif"
+        android:src="@drawable/events"
+        android:text="Events"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!-- Event 1: SpaceX Crew-8 Undocking -->
+    <TextView
+        android:id="@+id/long_march_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/event_title"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/events_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:lineSpacingExtra="4sp"
+        android:text="The Crew Dragon Endeavour will undock from the International Space Station with the Crew-8 mission."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/long_march_title"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/launch_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:lineSpacingExtra="4sp"
+
+        android:text="International Space Station"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/events_description" />
+
+    <TextView
+        android:id="@+id/launch_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:lineSpacingExtra="4sp"
+        android:text="Thu Oct 10, 2024 09:05 MESZ"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/launch_type" />
+
+    <!-- Details Link mit Pfeil-Icon -->
+    <LinearLayout
+        android:id="@+id/details_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:minHeight="28dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/launch_time"
+        tools:ignore="TouchTargetSizeCheck">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:text="Details"
+            android:textColor="#B6B8BB" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Details"
+            android:paddingTop="10dp"
+            app:tint="#B6B8BB"
+            android:src="@drawable/right_arrow_1" />
+    </LinearLayout>
+
+    <!-- Watch Icon Link -->
+    <LinearLayout
+        android:id="@+id/watch_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:minHeight="28dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_link"
+        tools:ignore="TouchTargetSizeCheck">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="Watch"
+            android:textColor="#B6B8BB" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Watch"
+            app:tint="#B6B8BB"
+            android:src="@drawable/play__1__1" />
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/darker_gray"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/watch_link" />
+
+    <!-- Event 2: Falcon 9 Block 5 Launch -->
+    <TextView
+        android:id="@+id/falcon9_title"
+        android:layout_width="0dp"
+        android:textSize="25sp"
+        android:layout_height="wrap_content"
+        android:text="Crew-9 Relocation"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textStyle="bold"
+        android:lineSpacingExtra="4sp"
+        android:paddingTop="30dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/falcon9_description"
+        android:layout_width="0dp"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:text="The Crew-9 Dragon spacecraft will be moved from the forward port of Harmony/PMA-2 to the zenith port of Harmony module/PMA-3."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/falcon9_title"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:lineSpacingExtra="4sp"
+        android:paddingTop="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/falcon9_launch_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="4sp"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:text="International Space Station"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/falcon9_description" />
+
+    <TextView
+        android:id="@+id/falcon9_launch_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="NET October, 2024"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/falcon9_launch_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:lineSpacingExtra="4sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="4dp" />
+
+
+
+    <!-- Watch Icon Link -->
+    <LinearLayout
+        android:id="@+id/watch_link2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:minHeight="28dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/falcon9_launch_time"
+        tools:ignore="TouchTargetSizeCheck">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="Watch"
+            android:textColor="#B6B8BB" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Watch"
+            app:tint="#B6B8BB"
+            android:src="@drawable/play__1__1" />
+
+
+
+    </LinearLayout>
+    <!-- Divider -->
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/darker_gray"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/watch_link2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

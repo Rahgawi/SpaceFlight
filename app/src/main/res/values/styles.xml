@@ -1,0 +1,11 @@
+<resources>
+    <style name="BottomNavigationActiveText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/bottom_nav_text_size</item>
+        <item name="android:textColor">@color/navigation_text_color</item>
+    </style>
+
+    <style name="BottomNavigationInactiveText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/bottom_nav_text_size</item>
+        <item name="android:textColor">@color/navigation_text_color</item>
+    </style>
+</resources>
